@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier",
+    "tslint-config-airbnb"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*.ts"
+    ]
+  },
+  "rules": {
+    "import-name": false,
+    "interface-name": false,
+    "variable-name": false
+  }
+}

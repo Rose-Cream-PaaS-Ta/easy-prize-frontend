@@ -1,0 +1,10 @@
+{
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ],
+  "name": "easy-prize-frontend",
+  "version": "0.0.1"
+}

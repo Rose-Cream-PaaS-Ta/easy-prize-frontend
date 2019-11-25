@@ -1,0 +1,31 @@
+{
+  "name": "easy-prize-frontend",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "now-build": "next build"
+  },
+  "repository": "https://github.com/Rose-Cream-PasS-Ta/easy-prize-frontend",
+  "author": "JunhoYeo <32605822+JunhoYeo@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/styled-components": "^4.4.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/next": "^9.0.0",
+    "@types/node": "^12.12.12",
+    "@types/react": "^16.9.13",
+    "@zeit/next-typescript": "^1.1.1",
+    "eslint": "^6.7.1",
+    "eslint-plugin-react": "^7.16.0",
+    "tslint": "^5.20.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.7.2"
+  }
+}
