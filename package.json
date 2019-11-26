@@ -6,7 +6,7 @@
     "dev": "next dev",
     "now-build": "next build"
   },
-  "repository": "https://github.com/Rose-Cream-PasS-Ta/easy-prize-frontend",
+  "repository": "https://github.com/Rose-Cream-PaaS-Ta/easy-prize-frontend",
   "author": "JunhoYeo <32605822+JunhoYeo@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
