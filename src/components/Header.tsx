@@ -14,12 +14,12 @@ const Title = styled.h1`
 const Description = styled.p`
   margin: 0;
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 `;
 
 interface HeaderProps {
-  title: string,
-  desc: string,
+  title: string;
+  desc: string;
 }
 
 export default class Header extends React.Component<HeaderProps> {
