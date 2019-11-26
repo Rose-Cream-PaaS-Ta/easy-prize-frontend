@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import newlineToBreak from '../utils/newlineToBreak';
 
 const Container = styled.div`
+  cursor: pointer;
   box-shadow: 0px 10px 36px -16px rgba(0,0,0,0.27);
   flex-basis: 0;
   flex-grow: 1;

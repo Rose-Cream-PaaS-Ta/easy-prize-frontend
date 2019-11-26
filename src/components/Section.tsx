@@ -1,20 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import '../global.scss';
-
 const Container = styled.div`
-  flex-grow: 1;
-  margin: 0 auto;
-  position: relative;
-  width: auto;
+  padding: 0rem 1.5rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 `;
 
-interface LayoutProps {
+interface SectionProps {
   children?: React.ReactElement[] | React.ReactElement;
 }
 
-export default class Layout extends React.Component<LayoutProps> {
+export default class Section extends React.Component<SectionProps> {
   public render() {
     const { children } = this.props;
     return (

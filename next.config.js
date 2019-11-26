@@ -1,5 +1,6 @@
-// const withTypescript = require('@zeit/next-typescript');
+const withTypescript = require('@zeit/next-typescript');
+const withSass = require('@zeit/next-sass');
 
-// module.exports = withTypescript({
-//   target: 'serverless',
-// });
+module.exports = withTypescript(withSass({
+  target: 'serverless',
+}));

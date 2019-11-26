@@ -4,10 +4,12 @@ import styled from 'styled-components';
 import Card from '../src/components/Card';
 import Header from '../src/components/Header';
 import Layout from '../src/components/Layout';
+import Section from '../src/components/Section';
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const CardList = styled.div`
@@ -23,8 +25,9 @@ const CardList = styled.div`
 
 const ContentTitle = styled.span`
   text-align: center;
-  margin: 1.5rem 0;
+  margin-bottom: 3rem;
   font-size: 1.5rem;
+  letter-spacing: 3px;
 `;
 
 const cardData = [
@@ -35,17 +38,21 @@ const cardData = [
 
 export default () => (
   <Layout>
-    <Header
-      title={'투명한 상장,\n이지프라이즈'}
-      desc={'이더리움 기반의 블록체인 네트워크를 이용한\n상장 수여 및 수상 내역 관리 서비스'}
-    />
-    <Content>
-      <ContentTitle>지금 시작해 보세요.</ContentTitle>
-      <CardList>
-        {cardData.map(({ title, desc }, key) => {
-          return <Card key={key} title={title} desc={desc} />;
-        })}
-      </CardList>
-    </Content>
+    <Section>
+      <Header
+        title={'투명한 상장,\n이지프라이즈'}
+        desc={'이더리움 기반의 블록체인 네트워크를 이용한\n상장 수여 및 수상 내역 관리 서비스'}
+      />
+    </Section>
+    <Section>
+      <Content>
+        <ContentTitle>지금 시작해 보세요.</ContentTitle>
+        <CardList>
+          {cardData.map(({ title, desc }, key) => {
+            return <Card key={key} title={title} desc={desc} />;
+          })}
+        </CardList>
+      </Content>
+    </Section>
   </Layout>
 );

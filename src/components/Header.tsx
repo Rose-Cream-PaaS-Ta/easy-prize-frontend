@@ -3,18 +3,22 @@ import styled from 'styled-components';
 
 import newlineToBreak from '../utils/newlineToBreak';
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 0 3rem;
+`;
 
 const Title = styled.h1`
   margin: 0;
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 1.3;
+  font-weight: 900;
 `;
 
 const Description = styled.p`
   margin: 0;
   margin-top: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: 300;
 `;
 
 interface HeaderProps {
