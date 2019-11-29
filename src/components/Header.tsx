@@ -21,12 +21,12 @@ const Description = styled.p`
   font-weight: 300;
 `;
 
-interface HeaderProps {
+interface IHeaderProps {
   title: string;
   desc: string;
 }
 
-export default class Header extends React.Component<HeaderProps> {
+export default class Header extends React.Component<IHeaderProps> {
   public render() {
     const { title, desc } = this.props;
     return (

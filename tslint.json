@@ -12,7 +12,6 @@
   },
   "rules": {
     "import-name": false,
-    "interface-name": false,
     "variable-name": false
   }
 }

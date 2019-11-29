@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "now-build": "next build"
+    "now-build": "next build",
+    "lint": "tslint src/**/*.{ts,tsx} --fix"
   },
   "repository": "https://github.com/Rose-Cream-PaaS-Ta/easy-prize-frontend",
   "author": "JunhoYeo <32605822+JunhoYeo@users.noreply.github.com>",

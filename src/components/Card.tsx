@@ -44,12 +44,12 @@ const Description = styled.span`
   word-break: keep-all;
 `;
 
-interface CardProps {
+interface ICardProps {
   title: string;
   desc: string;
 }
 
-export default class Card extends React.Component<CardProps> {
+export default class Card extends React.Component<ICardProps> {
   public render() {
     const { title, desc } = this.props;
     return (

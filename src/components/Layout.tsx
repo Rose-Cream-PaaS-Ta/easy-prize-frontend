@@ -10,11 +10,11 @@ const Container = styled.div`
   width: auto;
 `;
 
-interface LayoutProps {
+interface ILayoutProps {
   children?: React.ReactElement[] | React.ReactElement;
 }
 
-export default class Layout extends React.Component<LayoutProps> {
+export default class Layout extends React.Component<ILayoutProps> {
   public render() {
     const { children } = this.props;
     return (

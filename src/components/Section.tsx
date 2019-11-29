@@ -8,11 +8,11 @@ const Container = styled.div`
   align-items: center;
 `;
 
-interface SectionProps {
+interface ISectionProps {
   children?: React.ReactElement[] | React.ReactElement;
 }
 
-export default class Section extends React.Component<SectionProps> {
+export default class Section extends React.Component<ISectionProps> {
   public render() {
     const { children } = this.props;
     return (
