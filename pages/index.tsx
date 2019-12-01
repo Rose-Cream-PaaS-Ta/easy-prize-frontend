@@ -1,4 +1,5 @@
-import { Button as GrommetButton } from 'grommet';
+import { Button } from 'grommet';
+import { useRouter } from 'next/router';
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -19,7 +20,7 @@ const ButtonRow = styled.div`
   }
 `;
 
-const LoginButton = styled(props => <GrommetButton {...props} />)`
+const LoginButton = styled(props => <Button {...props} />)`
   color: #4263eb;
 `;
 
@@ -53,27 +54,38 @@ const cardData = [
   { title: '상장 조회자', desc: '수상자의 토큰으로\n수상 실적 조회가 가능합니다.' },
 ];
 
-export default () => (
-  <Layout>
-    <Section>
-      <ButtonRow>
-        <GrommetButton label="회원가입" primary={true} onClick={() => {}} />
-        <LoginButton label="로그인" onClick={() => {}} />
-      </ButtonRow>
-      <Header
-        title={'투명한 상장,\n이지프라이즈'}
-        desc={'이더리움 기반의 블록체인 네트워크를 이용한\n상장 수여 및 수상 내역 관리 서비스'}
-      />
-    </Section>
-    <Section>
-      <Content>
-        <ContentTitle>지금 시작해 보세요.</ContentTitle>
-        <CardList>
-          {cardData.map(({ title, desc }, key) => {
-            return <Card key={key} title={title} desc={desc} />;
-          })}
-        </CardList>
-      </Content>
-    </Section>
-  </Layout>
-);
+export default () => {
+  const router = useRouter();
+
+  return (
+    <Layout>
+      <Section>
+        <ButtonRow>
+          <Button
+            label="회원가입"
+            primary={true}
+            onClick={() => router.push('/join')}
+          />
+          <LoginButton
+            label="로그인"
+            onClick={() => router.push('/login')}
+          />
+        </ButtonRow>
+        <Header
+          title={'투명한 상장,\n이지프라이즈'}
+          desc={'이더리움 기반의 블록체인 네트워크를 이용한\n상장 수여 및 수상 내역 관리 서비스'}
+        />
+      </Section>
+      <Section>
+        <Content>
+          <ContentTitle>지금 시작해 보세요.</ContentTitle>
+          <CardList>
+            {cardData.map(({ title, desc }, key) => {
+              return <Card key={key} title={title} desc={desc} />;
+            })}
+          </CardList>
+        </Content>
+      </Section>
+    </Layout>
+  );
+};
