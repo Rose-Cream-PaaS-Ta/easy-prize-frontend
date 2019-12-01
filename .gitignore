@@ -1,5 +1,5 @@
 .next/
-.yarn-error.log
+yarn-error.log
 
 # editors
 .idea/
