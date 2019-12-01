@@ -23,6 +23,7 @@ const Description = styled.p`
   margin-top: 0.5rem;
   font-size: 1.5rem;
   font-weight: 300;
+  line-height: 1.3;
 `;
 
 interface IHeaderProps {

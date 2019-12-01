@@ -1,8 +1,8 @@
-import { Button } from 'grommet';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import styled from 'styled-components';
 
+import Button from '../src/components/Button';
 import Card from '../src/components/Card';
 import Header from '../src/components/Header';
 import Layout from '../src/components/Layout';
@@ -18,10 +18,6 @@ const ButtonRow = styled.div`
   button:first-child {
     margin-right: 0.5rem;
   }
-`;
-
-const LoginButton = styled(props => <Button {...props} />)`
-  color: #4263eb;
 `;
 
 const Content = styled.div`
@@ -62,14 +58,16 @@ export default () => {
       <Section>
         <ButtonRow>
           <Button
-            label="회원가입"
-            primary={true}
             onClick={() => router.push('/join')}
-          />
-          <LoginButton
-            label="로그인"
+          >
+            회원가입
+          </Button>
+          <Button
+            light={true}
             onClick={() => router.push('/login')}
-          />
+          >
+            로그인
+          </Button>
         </ButtonRow>
         <Header
           title={'투명한 상장,\n이지프라이즈'}

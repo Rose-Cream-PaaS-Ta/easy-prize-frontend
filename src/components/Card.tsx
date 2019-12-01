@@ -37,6 +37,7 @@ const Info = styled.div`
 const Title = styled.h2`
   margin: 0;
   font-size: 2rem;
+  line-height: 1.5;
 `;
 
 const Description = styled.span`
