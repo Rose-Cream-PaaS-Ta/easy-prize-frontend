@@ -12,6 +12,10 @@ const Title = styled.h1`
   font-size: 3.5rem;
   line-height: 1.3;
   font-weight: 900;
+
+  @media (max-width: 458px) {
+    font-size: 2.8rem;
+  }
 `;
 
 const Description = styled.p`

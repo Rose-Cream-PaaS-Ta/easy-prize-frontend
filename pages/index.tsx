@@ -1,3 +1,4 @@
+import { Button as GrommetButton } from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -5,6 +6,22 @@ import Card from '../src/components/Card';
 import Header from '../src/components/Header';
 import Layout from '../src/components/Layout';
 import Section from '../src/components/Section';
+
+const ButtonRow = styled.div`
+  display: flex;
+  position: absolute;
+  margin: 1.5rem;
+  top: 0;
+  right: 0;
+
+  button:first-child {
+    margin-right: 0.5rem;
+  }
+`;
+
+const LoginButton = styled(props => <GrommetButton {...props} />)`
+  color: #4263eb;
+`;
 
 const Content = styled.div`
   display: flex;
@@ -39,6 +56,10 @@ const cardData = [
 export default () => (
   <Layout>
     <Section>
+      <ButtonRow>
+        <GrommetButton label="회원가입" primary={true} onClick={() => {}} />
+        <LoginButton label="로그인" onClick={() => {}} />
+      </ButtonRow>
       <Header
         title={'투명한 상장,\n이지프라이즈'}
         desc={'이더리움 기반의 블록체인 네트워크를 이용한\n상장 수여 및 수상 내역 관리 서비스'}

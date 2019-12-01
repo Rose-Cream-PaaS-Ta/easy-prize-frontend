@@ -1,7 +1,17 @@
+import { Grommet } from 'grommet';
 import React from 'react';
 import styled from 'styled-components';
 
 import '../global.scss';
+
+const theme = {
+  global: {
+    colors: {
+      brand: '#4263eb',
+      focus: '#364fc7',
+    },
+  },
+};
 
 const Container = styled.div`
   flex-grow: 1;
@@ -18,9 +28,11 @@ export default class Layout extends React.Component<ILayoutProps> {
   public render() {
     const { children } = this.props;
     return (
-      <Container>
-        {children}
-      </Container>
+      <Grommet theme={theme}>
+        <Container>
+          {children}
+        </Container>
+      </Grommet>
     );
   }
 }
