@@ -5,6 +5,16 @@ import newlineToBreak from '../utils/newlineToBreak';
 
 const Container = styled.div`
   padding: 0 3rem;
+
+  @media (max-width: 780px) {
+    padding: 0;
+  }
+
+  @media (max-width: 570px) {
+    position: absolute;
+    bottom: 5rem;
+    padding: 0 1rem;
+  }
 `;
 
 const Title = styled.h1`
@@ -24,6 +34,11 @@ const Description = styled.p`
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.3;
+  word-break: keep-all;
+
+  @media (max-width: 570px) {
+    font-size: 1.1rem;
+  }
 `;
 
 interface IHeaderProps {

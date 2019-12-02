@@ -8,6 +8,33 @@ import Header from '../src/components/Header';
 import Layout from '../src/components/Layout';
 import Section from '../src/components/Section';
 
+const Illust = styled.img`
+  position: absolute;
+  right: 50px;
+  top: -10px;
+  z-index: -1;
+  filter: contrast(1.02);
+
+  @media (max-width: 1100px) {
+    height: 90%;
+    top: 45px;
+  }
+
+  @media (max-width: 900px) {
+    right: -100px;
+  }
+
+  @media (max-width: 600px) {
+    top: 100px;
+    height: 70%;
+  }
+
+  @media (max-width: 570px) {
+    top: 30px;
+    right: -100px;
+  }
+`;
+
 const ButtonRow = styled.div`
   display: flex;
   position: absolute;
@@ -56,6 +83,7 @@ export default () => {
   return (
     <Layout>
       <Section>
+        <Illust src={require('../assets/index-1.svg')} />
         <ButtonRow>
           <Button
             onClick={() => router.push('/join')}

@@ -15,10 +15,22 @@ const Container = styled.div`
   height: 25rem;
   margin-bottom: 2rem;
   border-radius: 4px;
-  background-image: url(${image});
-  background-position: bottom;
-  background-size: 100%;
-  background-repeat: no-repeat;
+
+  &:after {
+    background-image: url(${image});
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.5 !important;
+    filter: opacity(0.5);
+    z-index: -2;
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
 
   &:not(:last-child) {
     margin-right: 3.5rem;
@@ -57,11 +69,19 @@ const Title = styled.h2`
   @media (max-width: 769px) {
     font-size: 1.7rem;
   }
+
+  @media (max-width: 447px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Description = styled.span`
   font-size: 1.1rem;
   word-break: keep-all;
+
+  @media (max-width: 447px) {
+    font-size: 0.9rem;
+  }
 `;
 
 interface ICardProps {
@@ -92,7 +112,6 @@ export default class Card extends React.Component<ICardProps> {
         height: 100%;
         margin-left: 0.5rem;
         z-index: -1;
-        filter: opacity(0.3);
       }
     `;
 
