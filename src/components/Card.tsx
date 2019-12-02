@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 import newlineToBreak from '../utils/newlineToBreak';
 
-const image = require('../../assets/background-1.png');
+// tslint:disable-next-line:no-var-requires
+const backgroundImage = require('../../assets/background-1.png');
 
 const Container = styled.div`
   cursor: pointer;
@@ -17,7 +18,7 @@ const Container = styled.div`
   border-radius: 4px;
 
   &:after {
-    background-image: url(${image});
+    background-image: url(${backgroundImage});
     background-position: bottom;
     background-size: 100%;
     background-repeat: no-repeat;
