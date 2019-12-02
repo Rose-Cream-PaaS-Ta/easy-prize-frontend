@@ -45,9 +45,9 @@ const ContentTitle = styled.span`
 `;
 
 const cardData = [
-  { title: '상장 수여자', desc: '상장을 발급하고 수여하세요.' },
-  { title: '상장 수상자', desc: '수상 내역을 관리할 수 있습니다.' },
-  { title: '상장 조회자', desc: '수상자의 토큰으로\n수상 실적 조회가 가능합니다.' },
+  { title: '상장 수여자', desc: '상장을 발급하고 수여하세요.', image: 'cards/awardee.svg' },
+  { title: '상장 수상자', desc: '수상 내역을 관리할 수 있습니다.', image: 'cards/recipients.svg' },
+  { title: '상장 조회자', desc: '수상자의 실적을 조회합니다.', image: 'cards/inquiry.svg' },
 ];
 
 export default () => {
@@ -78,8 +78,8 @@ export default () => {
         <Content>
           <ContentTitle>지금 시작해 보세요.</ContentTitle>
           <CardList>
-            {cardData.map(({ title, desc }, key) => {
-              return <Card key={key} title={title} desc={desc} />;
+            {cardData.map(({ title, desc, image }, key) => {
+              return <Card key={key} title={title} desc={desc} image={image} />;
             })}
           </CardList>
         </Content>

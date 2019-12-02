@@ -12,7 +12,7 @@ interface IButtonProps {
 }
 
 const Button = (
-  { className, color = '#fff', bgColor = '#343a40', focusColor = '#212529',
+  { className, color = '#fff', bgColor = '#5c7cfa', focusColor = '#4263eb',
     children, light = false, onClick }: IButtonProps) => {
   const StyledButton = styled.button`
     color: ${color};
