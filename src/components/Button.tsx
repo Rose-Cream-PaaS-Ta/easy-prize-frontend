@@ -54,4 +54,5 @@ export default Button;
 export const LargeButton = styled(Button)`
   width: 100%;
   padding: 0.7rem 0 !important;
+  margin-top: 0.5rem;
 `;

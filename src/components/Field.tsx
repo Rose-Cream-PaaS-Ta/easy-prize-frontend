@@ -47,3 +47,7 @@ const Field = ({ className, label, value, placeholder, onChange, ...props }: IIn
 };
 
 export default Field;
+
+export const StyledField = styled(props => <Field {...props} />)`
+  margin-bottom: 1.2rem;
+`;
