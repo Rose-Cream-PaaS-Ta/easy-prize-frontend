@@ -11,7 +11,10 @@ export default () => {
 
   return (
     <Layout>
-      <Form title="돌아오신 걸 환영해요!">
+      <Form
+        title="돌아오신 걸 환영해요!"
+        image="auth/login.svg"
+      >
         <StyledField
           label="이메일"
           placeholder="이메일을 입력하세요."
