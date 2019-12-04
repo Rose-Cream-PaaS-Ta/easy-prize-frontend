@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -89,41 +90,41 @@ interface ICardProps {
   title: string;
   desc: string;
   image: string;
+  href?: string;
   idx?: number;
 }
 
-export default class Card extends React.Component<ICardProps> {
-  public render() {
-    const { title, desc, image, idx = 0 } = this.props;
-    const img = require(`../../assets/${image}`);
+export default ({ title, desc, image, href = '/', idx = 0 }: ICardProps) => {
+  const router = useRouter();
 
-    const Image = styled.img`
-      width: 100%;
-      position: absolute;
-      top: 0;
-      margin-top: 1.5rem;
+  const img = require(`../../assets/${image}`);
 
-      ${idx !== 2 && `
-        height: 60%;
-      `}
+  const Image = styled.img`
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 1.5rem;
 
-      @media (max-width: 769px) {
-        margin-top: 0;
-        width: 8rem;
-        height: 100%;
-        margin-left: 0.5rem;
-        z-index: -1;
-      }
-    `;
+    ${idx !== 2 && `
+      height: 60%;
+    `}
 
-    return (
-      <Container>
-        <Image src={img} key={idx} />
-        <Info>
-          <Title>{title}</Title>
-          <Description>{newlineToBreak(desc)}</Description>
-        </Info>
-      </Container>
-    );
-  }
-}
+    @media (max-width: 769px) {
+      margin-top: 0;
+      width: 8rem;
+      height: 100%;
+      margin-left: 0.5rem;
+      z-index: -1;
+    }
+  `;
+
+  return (
+    <Container onClick={() => router.push(href)}>
+      <Image src={img} key={idx} />
+      <Info>
+        <Title>{title}</Title>
+        <Description>{newlineToBreak(desc)}</Description>
+      </Info>
+    </Container>
+  );
+};
