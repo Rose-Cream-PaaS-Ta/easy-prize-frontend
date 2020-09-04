@@ -11,7 +11,7 @@
   "author": "JunhoYeo <32605822+JunhoYeo@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "polished": "^3.4.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
